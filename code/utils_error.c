@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_utils.c                                      :+:      :+:    :+:   */
+/*   utils_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:24:30 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/28 21:22:22 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:41:38 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void error_free(t_stack_node **a, char **argv, bool flag_argc_2)
+void error_free(t_stack_node **a, char **argv, int flag_argc_2)
 {
 	free_stack(a);
 	if (flag_argc_2)

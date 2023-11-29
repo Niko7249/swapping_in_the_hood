@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:25:17 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/28 12:52:42 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:41:19 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static long ft_atol(const char *str)
 
 
 
-void stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
+void stack_init(t_stack_node **a, char **argv, int flag_argc_2)
 {
 	long nb;
 	while (*argv)
@@ -50,7 +50,7 @@ void stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 		if (error_syntax(*argv))
 			error_free(a, argv, flag_argc_2);
 		nb = atol(*argv);
-		if ((nb > INT_MAX) || (nb < INT_MIN))
+		if ((nb > 2147483647) || (nb < -2147483648))
 			error_free(a, argv, flag_argc_2);
 		if (error_repetition(*a, (int)nb))
 			error_free(a, argv, flag_argc_2);

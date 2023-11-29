@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:10:30 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/27 14:34:48 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:37:28 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
 	stack_init(&a, argv + 1, argc == 2);
-	if (!stack)
 	return (0);
 }

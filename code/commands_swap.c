@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   commands_swap.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 21:23:04 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/28 21:35:07 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:40:52 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,20 @@ static void		swap(t_stack_node **head)
 	(*head)->next = (*head)->prev;
 	(*head)->prev = NULL;
 }
-void sa(t_stack_node **a, bool checker)
+void sa(t_stack_node **a)
 {
 	swap(a);
-	if (!checker)
-		write(1, "sa\n", 3);
+	write(1, "sa\n", 3);
 }
 
-void sb(t_stack_node **b, bool checker)
+void sb(t_stack_node **b)
 {
 	swap(b);
-	if (!checker)
-		write(1, "sb\n", 3);
+	write(1, "sb\n", 3);
 }
-void ss(t_stack_node **a, t_stack_node **b, bool checker)
+void ss(t_stack_node **a, t_stack_node **b)
 {
 	swap(a);
 	swap(b);
-	if(!checker)
-		write(1, "ss\n", 3);
+	write(1, "ss\n", 3);
 }

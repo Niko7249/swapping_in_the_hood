@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_utils.c                                       :+:      :+:    :+:   */
+/*   utils_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:39:22 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/28 13:03:12 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:42:03 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
-#include<limits.h>
 
-void error_free(t_stack_node **a, char **argv,bool flag_argc_2)
+void error_free(t_stack_node **a, char **argv,int flag_argc_2)
 {
 	exit(2);
 }
@@ -46,7 +45,7 @@ t_stack_node *find_smallest(t_stack_node *stack)
 
 	if (stack == NULL)
 		return (NULL);
-	smallest = LONG_MAX;
+	smallest = 9223372036854775807;
 	while (stack)
 	{
 		if (stack->value < smallest)
