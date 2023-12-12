@@ -6,11 +6,11 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:24:30 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/29 17:41:38 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:26:01 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 
 void	free_matrix(char **argv)
@@ -28,10 +28,10 @@ void	free_matrix(char **argv)
 int	error_check_nb(char *str_nb)
 {
 	if (!(*str_nb == '+' || *str_nb == '-'
-	|| (*str_nb >= '0' && *str_nb <= '9')))
+			|| (*str_nb >= '0' && *str_nb <= '9')))
 		return (1);
 	if ((*str_nb == '+' || *str_nb == '-')
-	&& !(str_nb[1] >= '0' && str_nb[1] <= '9'))
+			&& !(str_nb[1] >= '0' && str_nb[1] <= '9'))
 		return (1);
 	while (*++str_nb)
 	{
@@ -43,7 +43,7 @@ int	error_check_nb(char *str_nb)
 
 
 
-void free_stack(t_stack_node **stack)
+void	free_stack(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
 	t_stack_node	*ongoing;
@@ -60,7 +60,7 @@ void free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void error_free(t_stack_node **a, char **argv, int flag_argc_2)
+void	error_free(t_stack_node **a, char **argv, int flag_argc_2)
 {
 	free_stack(a);
 	if (flag_argc_2)
@@ -71,7 +71,7 @@ void error_free(t_stack_node **a, char **argv, int flag_argc_2)
 
 
 
-int	error_rep(t_stack_node *a, 	int nb)
+int	error_rep(t_stack_node *a, int nb)
 {
 	if (NULL == a)
 		return (0);

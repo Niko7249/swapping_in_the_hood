@@ -6,19 +6,19 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 21:36:21 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/29 16:40:55 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:14:45 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 static void	rotate(t_stack_node **stack)
 {
-	t_stack_node *last_node;
-	int		len;
+	t_stack_node	*last_node;
+	int				len;
 
 	len = stack_len(*stack);
-	if(*stack == NULL || stack == NULL || len == 1)
+	if (*stack == NULL || stack == NULL || len == 1)
 		return ;
 	last_node = find_last_node(*stack);
 	last_node->next = *stack;
@@ -28,19 +28,19 @@ static void	rotate(t_stack_node **stack)
 	last_node->next->next = NULL;
 }
 
-void ra(t_stack_node **a)
+void	ra(t_stack_node **a)
 {
 	rotate(a);
 	write(1, "ra\n", 3);
 }
 
-void rb(t_stack_node **b)
+void	rb(t_stack_node **b)
 {
 	rotate(b);
 	write(1, "rb\n", 3);
 }
 
-void rr(t_stack_node **a, t_stack_node **b)
+void	rr(t_stack_node **a, t_stack_node **b)
 {
 	rotate(a);
 	rotate(b);

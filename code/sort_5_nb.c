@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:53:07 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 13:04:20 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:19:51 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,21 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 	t_stack_node	*target_node;
 	long			best_match_index;
 
-	while(b)
+	while (b)
 	{
-		best_match_index = 9,223,372,036,854,775,807;
+		best_match_index = 9223372036854775807;
 		current_a = a;
 		while (current_a)
 		{
-			if (current_a->value > b->value && current_a->value < best_match_index)
+			if (current_a->value > b->value
+				&& current_a->value < best_match_index)
 			{
 				best_match_index = current_a->value;
 				target_node = current_a;
 			}
 			current_a = current_a->next;
 		}
-		if (9,223,372,036,854,775,807 == best_match_index)
+		if (best_match_index == 9223372036854775807)
 			b->target_node = find_smallest(a);
 		else
 			b->target_node = target_node;
@@ -50,7 +51,7 @@ void	set_current_position(t_stack_node *stack)
 	middle = stack_len(stack) / 2;
 	while (stack)
 	{
-		stack->current_position = j;
+		stack->current = j;
 		if (middle >= j)
 			stack->above_median = 1;
 		else
@@ -59,7 +60,8 @@ void	set_current_position(t_stack_node *stack)
 		j++;
 	}
 }
-void set_cost(t_stack_node *a, t_stack_node *b)
+
+void	set_cost(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
 	int	len_b;
@@ -68,29 +70,30 @@ void set_cost(t_stack_node *a, t_stack_node *b)
 	len_b = stack_len(b);
 	while (b)
 	{
-		b->push_cost = b->current_position;
+		b->push_weight = b->current;
 		if (!(b->above_median))
-			b->push_cost = len_b - (b->current_position);
+			b->push_weight = len_b - (b->current);
 		if (b->target_node->above_median)
-			b->push_cost += b->target_node->current_position;
+			b->push_weight += b->target_node->current;
 		else
-			b->push_cost += len_a - (b->target_node->current_position);
+			b->push_weight += len_a - (b->target_node->current);
 		b = b->next;
 	}
 }
-void set_lowest_cost(t_stack_node *b)
+
+void	set_lowest_cost(t_stack_node *b)
 {
-	long		best_value;
-	t_stack_node *best_value_node;
+	long			best_value;
+	t_stack_node	*best_value_node;
 
 	if (b == NULL)
 		return ;
-	best_value = 9,223,372,036,854,775,807;
+	best_value = 9223372036854775807;
 	while (b)
 	{
-		if (b->push_cost < best_value)
+		if (b->push_weight < best_value)
 		{
-			best_value = b->push_cost;
+			best_value = b->push_weight;
 			best_value_node = b;
 		}
 		b = b->next;

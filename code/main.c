@@ -6,11 +6,11 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:10:30 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 13:49:57 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:12:24 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 int	main(int argc, char **argv)
 {

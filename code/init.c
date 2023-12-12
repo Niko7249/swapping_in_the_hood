@@ -6,15 +6,15 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:25:17 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/29 17:41:19 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:15:39 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
-static long ft_atol(const char *str)
+static long	ft_atol(const char *str)
 {
-	long nb;
+	long	nb;
 	int		isneg;
 	int		j;
 
@@ -42,9 +42,10 @@ static long ft_atol(const char *str)
 
 
 
-void stack_init(t_stack_node **a, char **argv, int flag_argc_2)
+void	stack_init(t_stack_node **a, char **argv, int flag_argc_2)
 {
-	long nb;
+	long	nb;
+
 	while (*argv)
 	{
 		if (error_syntax(*argv))

@@ -6,11 +6,11 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 14:38:00 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 13:04:16 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:16:15 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 int	stack_sorted(t_stack_node *stack)
 {
@@ -25,9 +25,9 @@ int	stack_sorted(t_stack_node *stack)
 	return (1);
 }
 
-static t_stack_node		*find_highest(t_stack_node *stack)
+static t_stack_node	*find_highest(t_stack_node *stack)
 {
-	int		highest;
+	int				highest;
 	t_stack_node	*highest_node;
 
 	if (stack == NULL)
@@ -60,9 +60,10 @@ void	three_nb_sort(t_stack_node **a)
 	if ((*a)->value > (*a)->next->value)
 		sa(a);
 }
-void five_nb_sort(t_stack_node **a, t_stack_node **b)
+
+void	five_nb_sort(t_stack_node **a, t_stack_node **b)
 {
-	while(stack_len(*a) > 3)
+	while (stack_len(*a) > 3)
 	{
 		init_nodes(*a, *b);
 		finish_rotation(a, find_smallest(*a), 'a');
