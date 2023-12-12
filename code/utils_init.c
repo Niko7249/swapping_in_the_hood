@@ -6,29 +6,12 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:39:22 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/11/29 17:42:03 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 13:38:32 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void error_free(t_stack_node **a, char **argv,int flag_argc_2)
-{
-	exit(2);
-}
-
-int error_repetition(t_stack_node *a, int nb)
-{
-	if (a == NULL)
-		return (0);
-	while (a)
-	{
-		if (a->value == nb)
-			return (1);
-		a = a->next;
-	}
-	return (0);
-}
 t_stack_node *find_last_node(t_stack_node *head)
 {
 	if (head == NULL)

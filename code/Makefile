@@ -7,8 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 
 # Source and object files
-SRC = main.c \
-	  split.c
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
 # Main rule to build the executable
