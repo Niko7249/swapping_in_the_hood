@@ -1,7 +1,7 @@
 # Compiler and compiler flags
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Executable name
 NAME = push_swap
@@ -12,7 +12,7 @@ OBJ = $(SRC:.c=.o)
 
 # Main rule to build the executable
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) $(NAME)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 # Clean rule
 clean:

@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:10:33 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 16:27:46 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/13 14:36:46 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,6 @@ char	**ft_split(char *str, char separator)
 		}
 		vector_strings[j++] = get_next_word(str, separator);
 	}
+	vector_strings[j] = NULL;
+	return (vector_strings);
 }

@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:04:47 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 16:33:25 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:47:02 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_stack_node
 	int					push_weight;
 	int					cheapest;
 	int					above_median;
-	int					cheapest;
 	struct s_stack_node	*target_node;
 	struct s_stack_node	*next;
 	struct s_stack_node	*prev;

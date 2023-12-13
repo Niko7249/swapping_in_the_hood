@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:24:30 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 16:26:01 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 17:31:36 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	error_check_nb(char *str_nb)
 			|| (*str_nb >= '0' && *str_nb <= '9')))
 		return (1);
 	if ((*str_nb == '+' || *str_nb == '-')
-			&& !(str_nb[1] >= '0' && str_nb[1] <= '9'))
+		&& !(str_nb[1] >= '0' && str_nb[1] <= '9'))
 		return (1);
 	while (*++str_nb)
 	{

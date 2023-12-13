@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:53:07 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 16:19:51 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:51:09 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,6 @@ void	init_nodes(t_stack_node *a, t_stack_node *b)
 	set_current_position(a);
 	set_current_position(b);
 	set_target_node(a, b);
-	set_price(a, b);
-	set_cheapest(b);
+	set_cost(a, b);
+	set_lowest_cost(b);
 }

@@ -6,7 +6,7 @@
 /*   By: ntamiano <ntamiano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:20:11 by ntamiano          #+#    #+#             */
-/*   Updated: 2023/12/12 16:31:08 by ntamiano         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:51:31 by ntamiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,13 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 
 	len_a = stack_len(*a);
 	if (5 == len_a)
-		handle_five(a, b);
+		five_nb_sort(a, b);
 	else
 	{
 		while (len_a-- > 3)
 			pb(b, a);
 	}
-	tiny_sort(a);
+	three_nb_sort(a);
 	while (*b)
 	{
 		init_nodes(*a, *b);
