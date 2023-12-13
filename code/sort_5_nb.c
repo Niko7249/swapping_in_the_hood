@@ -101,7 +101,6 @@ void	set_lowest_cost(t_stack_node *b)
 	best_value_node->cheapest = 1;
 }
 
-
 void	init_nodes(t_stack_node *a, t_stack_node *b)
 {
 	set_current_position(a);

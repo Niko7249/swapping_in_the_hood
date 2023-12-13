@@ -40,8 +40,6 @@ static long	ft_atol(const char *str)
 	return (nb * isneg);
 }
 
-
-
 void	stack_init(t_stack_node **a, char **argv, int flag_argc_2)
 {
 	long	nb;

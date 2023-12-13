@@ -54,7 +54,6 @@ t_stack_node	*return_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-
 int	stack_len(t_stack_node *stack)
 {
 	int	count;
@@ -69,8 +68,6 @@ int	stack_len(t_stack_node *stack)
 	}
 	return (count);
 }
-
-
 
 void	append_node(t_stack_node **stack, int nb)
 {

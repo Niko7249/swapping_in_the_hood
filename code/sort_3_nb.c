@@ -45,9 +45,6 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 	return (highest_node);
 }
 
-
-
-
 void	three_nb_sort(t_stack_node **a)
 {
 	t_stack_node	*highest_node;

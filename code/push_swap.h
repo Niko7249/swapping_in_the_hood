@@ -10,14 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-
 # include <unistd.h> // read - write -
 # include <stdlib.h> //write - free - exit
-
 
 typedef struct s_stack_node
 {
@@ -71,7 +68,6 @@ void			push_swap(t_stack_node **a, t_stack_node **b);
 
 // MAIN.C
 
-
 // COMMANDS //
 // PUSH
 void			pa(t_stack_node **a, t_stack_node **b);
@@ -88,6 +84,5 @@ void			rrr(t_stack_node **a, t_stack_node **b);
 void			sa(t_stack_node **a);
 void			sb(t_stack_node **b);
 void			ss(t_stack_node **a, t_stack_node **b);
-
 
 #endif

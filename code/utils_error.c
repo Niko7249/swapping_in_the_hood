@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-
 void	free_matrix(char **argv)
 {
 	int	j;
@@ -41,8 +40,6 @@ int	error_check_nb(char *str_nb)
 	return (0);
 }
 
-
-
 void	free_stack(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
@@ -68,8 +65,6 @@ void	error_free(t_stack_node **a, char **argv, int flag_argc_2)
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
-
 
 int	error_rep(t_stack_node *a, int nb)
 {

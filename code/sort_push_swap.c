@@ -70,7 +70,6 @@ static void	move_nodes(t_stack_node **a, t_stack_node **b)
 	pa(a, b);
 }
 
-
 void	push_swap(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*smallest;

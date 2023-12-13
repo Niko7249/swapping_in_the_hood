@@ -67,7 +67,6 @@ char	**ft_split(char *str, char separator)
 	j = 0;
 	words_numb = count_worlds(str, separator);
 	vector_strings = malloc(sizeof (char *) * (words_numb + 2));
-
 	if (vector_strings == NULL)
 		return (NULL);
 	while (words_numb-- >= 0)
